@@ -1,0 +1,76 @@
+{
+  "samples": [
+    {
+      "name": "Standard message with individual bytes",
+      "description": "A standard CAN message with 6 data bytes (Hello!)",
+      "payload": {
+        "channel": 0,
+        "can_id": 123,
+        "dlc": 6,
+        "byte0": 72,
+        "byte1": 69,
+        "byte2": 76,
+        "byte3": 76,
+        "byte4": 79,
+        "byte5": 33,
+        "byte6": 0,
+        "byte7": 0,
+        "bitrate": 250000
+      }
+    },
+    {
+      "name": "Short message",
+      "description": "A short CAN message with just 2 data bytes",
+      "payload": {
+        "channel": 0,
+        "can_id": 456,
+        "dlc": 2,
+        "byte0": 10,
+        "byte1": 20,
+        "bitrate": 250000
+      }
+    },
+    {
+      "name": "Message with max ID",
+      "description": "A CAN message with the maximum standard ID (2047)",
+      "payload": {
+        "channel": 0,
+        "can_id": 2047,
+        "dlc": 8,
+        "byte0": 1,
+        "byte1": 2,
+        "byte2": 3,
+        "byte3": 4,
+        "byte4": 5,
+        "byte5": 6,
+        "byte6": 7,
+        "byte7": 8,
+        "bitrate": 250000
+      }
+    },
+    {
+      "name": "Legacy format with data array",
+      "description": "A CAN message using the legacy data array format",
+      "payload": {
+        "channel": 0,
+        "can_id": 789,
+        "dlc": 4,
+        "data": [84, 69, 83, 84],
+        "bitrate": 250000
+      }
+    },
+    {
+      "name": "Different bitrate",
+      "description": "A CAN message with a different bitrate (125000)",
+      "payload": {
+        "channel": 0,
+        "can_id": 555,
+        "dlc": 3,
+        "byte0": 1,
+        "byte1": 2,
+        "byte2": 3,
+        "bitrate": 125000
+      }
+    }
+  ]
+}
